@@ -8,6 +8,7 @@ features:
 --> if CPU is idle, wait till next process arrives according to the FCFS algorithm.
 --> print the Arrival time, Burst time, Completition time, Turn around time, Waiting time.
 --> Calculate Avg tat, avg wt.
+--> Show CPU idle time periods
 
 */
 
@@ -60,8 +61,10 @@ int main(){
     // Calculate times for each job
   
     for (i = 0; i < n; i++) {
-        if (time < at[i]) {
-            time = at[i];     // If CPU is idle, move time to next job's arrival time
+         if (time < at[i]) {
+            printf("CPU is idle from time %d to %d\n", time, at[i]);
+            idle += at[i] - time;   // calculate and print CPU idle time
+            time = at[i]; // If CPU is idle, move time to next job's arrival time
         }
         st[i] = time;
         ct[i] = st[i] + bt[i];
