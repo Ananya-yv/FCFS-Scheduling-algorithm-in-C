@@ -5,7 +5,7 @@ date: 14.06.2024
 features:
 --> perform FCFS scheduling algorithm.
 --> sort processes based on arrival times.
---> if CPU is idle, wait till next process arrives according to the FCFS algorithm.
+--> if CPU is idle, move time to next jobs arrival.
 --> print the Arrival time, Burst time, Completition time, Turn around time, Waiting time.
 --> Calculate Avg tat, avg wt.
 --> Show CPU idle time periods
